@@ -1,9 +1,8 @@
-import React from 'react'
-import { useCounter } from '../context/CounterProvider'
+import { useStory } from '../context/StoriesProvider'
 
 const Stories = () => {
 
-    const {hits, isloading} = useCounter()
+    const {hits, isloading, removePost} = useStory()
     if (isloading) {
         return <h2>Loading.....</h2>
     }
@@ -22,12 +21,12 @@ const Stories = () => {
                         
                         </p>
                         <div className="card-button">
-                            <a href={url} target="_blank">
+                            <a href={url} rel='noreferrer' target="_blank">
                             Read More
                             </a>
-                            {/* <a href="#" onClick={() => removePost(objectID) }>
+                            <button onClick={() => removePost(objectID) }>
                             Remove
-                            </a> */}
+                            </button>
                         </div>
                     </div>
                 )

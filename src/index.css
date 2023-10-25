@@ -24,11 +24,15 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  /* margin: auto; */
   display: flex;
-  place-items: center;
+  /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -66,4 +70,45 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+.searchbox{
+  width: 500px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-radius: 50px;
+
+}
+
+.card{
+  min-width: 20rem;
+  width: 40vw;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  color: #15133c;
+  margin: 20px 0;
+}
+
+.card-button{
+  display: flex;
+  flex-direction: column  ;
+  gap: 2rem;
+}
+
+.pagination{
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto;
+  justify-self: center;
+  align-self: center;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }

@@ -1,12 +1,12 @@
 
 
 import './App.css'
-import { CounterProvider, useCounter } from '../context/CounterProvider'
+// import { CounterProvider, useCounter } from '../context/CounterProvider'
 import { Pagination, Search, Stories } from '../components'
 
 function App() {
 
-  const counter = useCounter()
+  
 
   return ( 
     <>

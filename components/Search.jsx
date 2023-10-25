@@ -1,8 +1,21 @@
-import React from 'react'
+import '../src/index.css'
+import { useStory } from '../context/StoriesProvider'
 
 const Search = () => {
+
+  const {query, searchPost} = useStory()
   return (
-    <div>Search</div>
+    <>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input 
+          className='searchbox'
+          type="text" 
+          placeholder='Search' 
+          value={query}
+          onChange={(e) =>searchPost(e.target.value)}
+          />
+      </form>
+    </>
   )
 }
 
